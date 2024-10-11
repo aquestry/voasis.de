@@ -14,6 +14,6 @@ export default defineConfig({
     search: {
       provider: 'local'
     },
-    logo: 'https://svgshare.com/i/1BQ3.svg'
+    logo: 'https://svgshare.com/i/1BRd.svg'
   },
 });
