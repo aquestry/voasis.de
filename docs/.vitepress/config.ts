@@ -14,6 +14,6 @@ export default defineConfig({
     search: {
       provider: 'local'
     },
-    logo: 'https://i.imgur.com/FNq0RYO.png'
+    logo: '/icon.png'
   },
 });
