@@ -21,6 +21,6 @@ Nebula is the backbone of the Voasis Network's next-generation server management
 
 ## Seamless Integration with GitHub
 
-Our project is open-source and available on [GitHub](https://github.com/aquestry/ServerHandlerProxy). Join the community, contribute to the codebase, or fork the project to adapt it to your needs. We believe in the power of collaboration and welcome contributions from developers worldwide.
+Our project is open-source and available on [GitHub](https://github.com/aquestry/Nebula). Join the community, contribute to the codebase, or fork the project to adapt it to your needs. We believe in the power of collaboration and welcome contributions from developers worldwide.
 
 Explore the future of server management with Voasis Network and elevate your Minecraft projects to new heights.

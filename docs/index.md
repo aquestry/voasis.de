@@ -10,5 +10,4 @@ hero:
       link: https://discord.gg/jC9azQtJmC
     - theme: alt
       text: View on GitHub
-      link: https://github.com/aquestry/ServerHandlerProxy
----
+      link: https://github.com/aquestry/Nebula
