@@ -1,7 +1,7 @@
 ---
 layout: home
 hero:
-  name: Voasis - Nebula
+  name: "Voasis - Nebula"
   text: Dynamically managed server network.
   tagline: Simple, powerful, and smart server network that uses Nebula.
   actions:
@@ -11,4 +11,14 @@ hero:
     - theme: alt
       text: View on GitHub
       link: https://github.com/aquestry/ServerHandlerProxy
+
+head:
+  - - style
+    - |
+      :root {
+        --vp-home-hero-name-color: transparent;
+        --vp-home-hero-name-background: -webkit-linear-gradient(120deg, #bd34fe 30%, #41d1ff);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: var(--vp-home-hero-name-color);
+      }
 ---
