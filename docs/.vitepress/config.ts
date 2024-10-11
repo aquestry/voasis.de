@@ -14,6 +14,6 @@ export default defineConfig({
     search: {
       provider: 'local'
     },
-    logo: '/icon.svg'
+    logo: '/.vitepress/icon.svg'
   },
 });
