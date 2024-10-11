@@ -13,6 +13,7 @@ export default defineConfig({
     },
     search: {
       provider: 'local'
-    }
+    },
+    logo: 'https://avatars.githubusercontent.com/u/155507142?v=4'
   },
 });
