@@ -2,7 +2,7 @@
 layout: home
 
 hero:
-  name: Voasis - Nebula
+  name: '<span style="background: linear-gradient(to right, #add8e6, #00008b); -webkit-background-clip: text; color: transparent;">Voasis - Nebula</span>'
   text: Dynamically managed server network.
   tagline: Simple, powerful, and smart server network that uses Nebula.
   actions:
