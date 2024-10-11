@@ -11,4 +11,4 @@ hero:
     - theme: alt
       text: View on GitHub
       link: https://github.com/aquestry/ServerHandlerProxy
-![An image](https://svgshare.com/i/1BRd.svg)
+---
