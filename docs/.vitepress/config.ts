@@ -15,6 +15,6 @@ export default defineConfig({
       provider: 'local'
     },
     logo: 'https://svgshare.com/i/1BRd.svg',
-    cleanUrls: 'without-subfolders'
+    cleanUrls: true
   },
 });
