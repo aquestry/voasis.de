@@ -9,7 +9,7 @@ hero:
       text: Discord
       link: https://discord.gg/jC9azQtJmC
     - theme: alt
-      text: View on GitHub
+      text: GitHub
       link: https://github.com/aquestry/Nebula
     - theme: alt
       text: Author
