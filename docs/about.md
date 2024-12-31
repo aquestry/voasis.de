@@ -1,6 +1,6 @@
 ## 🌐 About Voasis Network
 
-Voasis Network is a **Minecraft server network** using a selfmade next-generation **server management system**. Our custom system runs on the Velocity proxy, connecting seamlessly to nodes and manages Docker containers for backend server instances. Whether you're managing a small server or a large-scale network, our platform provides all the tools you need to effortlessly control, monitor, and scale your setup.
+Voasis Network is a **Minecraft server network** using a selfmade next-generation **server management system**. Our custom system runs on the Velocity proxy.It connects  to nodes and manages Docker containers. Whether you're managing a small server or a large-scale network, our platform provides all the tools you need to effortlessly control, monitor, and scale your server.
 
 # Nebula
 
