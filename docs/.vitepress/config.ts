@@ -4,7 +4,7 @@ export default defineConfig({
   lang: 'en-US',
   title: 'Voasis - Nebula',
   description: 'Dynamically managed server network.',
-  head: [['link', { rel: 'icon', href: 'https://svgshare.com/i/1BRd.svg' }]],
+  head: [['link', { rel: 'icon', href: 'https://ams02pap001files.storage.live.com/y4mxLCM3AXgk7BZhDltzQEmeyQskUAQlu2U69Aw_Rr6ftmg4HApkxh_iX0HBeIPnB0kfJna50vBGuYVlIlgstYgcPvlrZtsF1QnHswOoWWyMwRcIH62cjrlAvIQ65MJ238mUCGe0dXWoyPtuL8cDD5QrvFHpTudX2K4fInpNSoF7VIb_czj69gR8y5ENRc_l11DUOcVBXMZFkl-_STavbMANpnWpmNfcg0t6Rc6eUErL8g' }]],
   themeConfig: {
     nav: [{ text: 'About', link: '/about' }],
     footer: {
@@ -14,7 +14,7 @@ export default defineConfig({
     search: {
       provider: 'local'
     },
-    logo: 'https://svgshare.com/i/1BRd.svg',
+    logo: 'https://ams02pap001files.storage.live.com/y4mxLCM3AXgk7BZhDltzQEmeyQskUAQlu2U69Aw_Rr6ftmg4HApkxh_iX0HBeIPnB0kfJna50vBGuYVlIlgstYgcPvlrZtsF1QnHswOoWWyMwRcIH62cjrlAvIQ65MJ238mUCGe0dXWoyPtuL8cDD5QrvFHpTudX2K4fInpNSoF7VIb_czj69gR8y5ENRc_l11DUOcVBXMZFkl-_STavbMANpnWpmNfcg0t6Rc6eUErL8g',
     cleanUrls: true
   },
 });

@@ -12,5 +12,5 @@ hero:
       text: GitHub
       link: https://github.com/aquestry/Nebula
     - theme: alt
-      text: Author
+      text: Maker
       link: https://aquestry.dev

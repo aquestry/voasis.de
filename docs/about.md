@@ -1,26 +1,166 @@
 ## 🌐 About Voasis Network
 
-Voasis Network is a **Minecraft server network** featuring a next-generation **server management system**. Our custom plugin runs on the Velocity proxy, connecting seamlessly to host servers and creating Docker containers for backend server instances. Whether you're managing a small server or a large-scale network, our platform provides all the tools you need to effortlessly control, monitor, and scale your setup.
+Voasis Network is a **Minecraft server network** using a selfmade next-generation **server management system**. Our custom system runs on the Velocity proxy, connecting seamlessly to nodes and manages Docker containers for backend server instances. Whether you're managing a small server or a large-scale network, our platform provides all the tools you need to effortlessly control, monitor, and scale your setup.
 
-- **⚙️ Dynamically Managed Servers:** Easily create, start, stop, and manage servers in real-time with just a few clicks.
-- **🚀 Performance-Optimized:** Built to handle high traffic and intensive workloads without compromising on speed or stability.
-- **🖥️ User-Friendly Interface:** Manage your entire server network with an intuitive dashboard that provides all the controls at your fingertips.
-- **🌍 Community Driven:** Join our growing community on [Discord](https://discord.gg/jC9azQtJmC) and collaborate with like-minded developers and network administrators.
+# Nebula
 
-## 🛠️ About Nebula - Powering the Voasis Network
+![Velocity](https://flat.badgen.net/badge/Velocity/3.4.0/1197d1?icon=dockbit)
 
-Nebula is the backbone of the Voasis Network's next-generation server management system. It provides a robust and scalable platform that powers our dynamic server environment, making it easy for administrators to control and optimize their Minecraft server infrastructure.
+**Nebula** is a server management tool built with Java and integrated with Velocity, designed to handle the dynamic creation, management, and control of Minecraft server instances. It uses Docker on Hold-Servers to manage Backend-Servers.
 
-### Key Features of Nebula:
+## Key Features:
+- **Simple Permissions**: Simply define groups in the config.
+- **Port Management**: Automatically retrieve free ports to assign to new server instances.
+- **Node Management**: Automatically creates and deletes containers when needed.
+- **Velocity Integration**: Integrates with Velocity, allowing dynamic server registration and player management within the Velocity proxy.
 
-- **🛫 Flexible Server Deployment:** Nebula enables the seamless creation, management, and scaling of server instances across the Voasis Network. Its integration with Docker allows you to spin up new servers in seconds.
-- **📈 Automated Scaling:** Automatically adjusts resources based on server load to ensure optimal performance, no matter the number of players online.
-- **⚖️ Intelligent Resource Allocation:** Nebula efficiently distributes system resources to prevent bottlenecks and maintain a lag-free experience.
-- **📊 Advanced Monitoring Tools:** Real-time analytics and performance tracking to keep you informed about your server’s health and activity.
-- **🔌 Custom Plugin Integration:** Designed to work effortlessly with the custom plugin running on the Velocity proxy, ensuring that server instances are always connected and in sync.
+## Requirements:
+- **Java 21**: Required for running the Proxy instance.
+- **Velocity Proxy**: No predefined servers are required; servers are dynamically registered.
+- **Docker and Ruby on hold server**: Necessary for running the backend servers.
+- **User on hold server**: Necessary for interacting with Docker, make sure he has the right permissions.
 
-## 🔗 Seamless Integration with GitHub
+## Setup:
+1. Clone the repository.
+2. Build.
+3. Put into your plugins folder (Velocity-Proxy).
+5. Run Server.
+6. Stop and configure and then start again.
+   
+## Important Info:
+On start, Velocity will try to create a server on the first backend server via the Lobby-Template in the config.
+Later on, it will create more lobby servers according to the player count limits defined in the config.
+## In-Game Commands
+Nebula also supports in-game commands for admins to manage server instances directly within Minecraft.
+You dont have to use them, Nebula does handle the queue and lobby scalign on its own.
+But here they are:
 
-Our project is open-source and available on [GitHub](https://github.com/aquestry/Nebula). Join the community, contribute to the codebase, or fork the project to adapt it to your needs. We believe in the power of collaboration and welcome contributions from developers worldwide.
+### **Admin Commands:** **Permission: 'velocity.admin'**
 
-Explore the future of server management with Voasis Network and elevate your Minecraft projects to new heights.
+- **/admin template [template_name] [new_server_name]**  
+  - **Description**: Creates a new server instance using the specified template.
+  - **Example**:  
+    ```
+    /admin template anton691/simple-lobby:latest test
+    ```
+
+- **/admin kill [server_name]**  
+  - **Description**: Kills a running server instance.
+  - **Example**:  
+    ```
+    /admin kill test
+    ```
+
+- **/admin delete [server_name]**  
+  - **Description**: Deletes a server instance. (Will Kill it before.)
+  - **Example**:  
+    ```
+    /admin delete test
+    ```
+    
+- **/admin start [server_name]**  
+  - **Description**: Starts a server instance.
+  - **Example**:  
+    ```
+    /admin start test
+    ```
+    
+### **Group Commands:** **Permission: 'velocity.admin'**
+
+- **/group assign [player_name] [group_name]**  
+  - **Description**: Assigns a specified group to a player. This changes the player's group affiliation to the provided group name.
+  - **Example**:  
+    ```
+    /group assign Alice Moderator
+    ```
+
+- **/group create [group_name] [level] [prefix...]**  
+  - **Description**: Creates a new group with the given name, level, and prefix. The `level` determines the hierarchy or priority of the group, and the `prefix` is used as a tag for the group.
+  - **Example**:  
+    ```
+    /group create VIP 2 "VIP Player"
+    ```
+
+- **/group delete [group_name]**  
+  - **Description**: Deletes an existing group. **Note**: The default group cannot be deleted.
+  - **Example**:  
+    ```
+    /group delete VIP
+    ```
+
+- **/group list**  
+  - **Description**: Lists all existing groups.
+  - **Example**:  
+    ```
+    /group list
+    ```
+
+- **/group permission add [group_name] [permission]**  
+  - **Description**: Adds a specific permission to a group.
+  - **Example**:  
+    ```
+    /group permission add VIP access_premium_features
+    ```
+
+- **/group permission remove [group_name] [permission]**  
+  - **Description**: Removes a specific permission from a group.
+  - **Example**:  
+    ```
+    /group permission remove VIP access_premium_features
+    ```
+
+- **/group permission list [group_name]**  
+  - **Description**: Lists all permissions assigned to a specified group.
+  - **Example**:  
+    ```
+    /group permission list VIP
+    ```
+
+- **/group info [group_name]**  
+  - **Description**: Displays detailed information about a specific group, including its permissions and other relevant details.
+  - **Example**:  
+    ```
+    /group info VIP
+    ```
+
+### **Queue Commands:**
+
+- **/queue join [queue name]**  
+  - **Description**: Join a queue.
+  - **Example**:  
+    ```
+    /queue join Duels
+    ```
+
+- **/queue leave**  
+  - **Description**: Leaves current queue.
+  - **Example**:  
+    ```
+    /queue leave
+    ```
+    
+### **Party Commands:**
+
+- **/party invite [player]**  
+  - **Description**: Invite a player.
+  - **Example**:  
+    ```
+    /party invite BastiGHG
+    ```
+    
+- **/party accept [invite]**  
+  - **Description**: Accept a invite from a player, if no invite is given it will try to use the latest invite.
+  - **Example**:  
+    ```
+    /party accept Aquestry
+    ```
+
+- **/party leave**  
+  - **Description**: Leave the current party..
+  - **Example**:  
+    ```
+    /party leave
+    ```
+        
+## Future Enhancements:
+- Multi-Proxy-System
