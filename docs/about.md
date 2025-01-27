@@ -1,10 +1,8 @@
-## 🌐 About Voasis Network
+# About Voasis Network
 
-Voasis Network is a **Minecraft server network** using a selfmade next-generation **server management system**. Our custom system runs on the Velocity proxy.It connects  to nodes and manages Docker containers. Whether you're managing a small server or a large-scale network, our platform provides all the tools you need to effortlessly control, monitor, and scale your server.
+Voasis Network is a minecraft server network using a self-made next-generation server management system. Our custom system runs on the Velocity proxy. It connects to nodes and manages Docker containers. Whether you're managing a small server or a large-scale network, our platform provides all the tools you need to effortlessly control, monitor, and scale your server.
 
-# Nebula
-
-![Velocity](https://flat.badgen.net/badge/Velocity/3.4.0/1197d1?icon=dockbit)
+# About Nebula
 
 **Nebula** is a server management tool built with Java and integrated with Velocity, designed to handle the dynamic creation, management, and control of Minecraft server instances. It uses Docker on Hold-Servers to manage Backend-Servers.
 
@@ -24,45 +22,46 @@ Voasis Network is a **Minecraft server network** using a selfmade next-generatio
 1. Clone the repository.
 2. Build.
 3. Put into your plugins folder (Velocity-Proxy).
-5. Run Server.
-6. Stop and configure and then start again.
+4. Run Server.
+5. Stop and configure and then start again.
    
 ## Important Info:
-On start, Velocity will try to create a server on the first backend server via the Lobby-Template in the config.
+On start, nebula will try to create a server on the first node via the lobby template in the config.
 Later on, it will create more lobby servers according to the player count limits defined in the config.
+
 ## In-Game Commands
 Nebula also supports in-game commands for admins to manage server instances directly within Minecraft.
-You dont have to use them, Nebula does handle the queue and lobby scalign on its own.
+You don't have to use them, Nebula does handle the queue and lobby scaling on its own.
 But here they are:
 
 ### **Admin Commands:** **Permission: 'velocity.admin'**
 
-- **/admin template [template_name] [new_server_name]**  
+- **/node template [template_name] [new_server_name]**  
   - **Description**: Creates a new server instance using the specified template.
   - **Example**:  
     ```
-    /admin template anton691/simple-lobby:latest test
+    /node template anton691/simple-lobby:latest test
     ```
 
-- **/admin kill [server_name]**  
+- **/node kill [server_name]**  
   - **Description**: Kills a running server instance.
   - **Example**:  
     ```
-    /admin kill test
+    /node kill test
     ```
 
-- **/admin delete [server_name]**  
+- **/node delete [server_name]**  
   - **Description**: Deletes a server instance. (Will Kill it before.)
   - **Example**:  
     ```
-    /admin delete test
+    /node delete test
     ```
     
-- **/admin start [server_name]**  
+- **/node start [server_name]**  
   - **Description**: Starts a server instance.
   - **Example**:  
     ```
-    /admin start test
+    /node start test
     ```
     
 ### **Group Commands:** **Permission: 'velocity.admin'**
@@ -149,18 +148,15 @@ But here they are:
     ```
     
 - **/party accept [invite]**  
-  - **Description**: Accept a invite from a player, if no invite is given it will try to use the latest invite.
+  - **Description**: Accept an invitation from a player, if no invite is given it will try to use the latest invite.
   - **Example**:  
     ```
     /party accept Aquestry
     ```
 
 - **/party leave**  
-  - **Description**: Leave the current party..
+  - **Description**: Leave the current party.
   - **Example**:  
     ```
     /party leave
     ```
-        
-## Future Enhancements:
-- Multi-Proxy-System
