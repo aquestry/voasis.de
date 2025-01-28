@@ -4,32 +4,48 @@ Voasis Network is a minecraft server network using a self-made next-generation s
 
 # About Nebula
 
-**Nebula** is a server management tool built with Java and integrated with Velocity, designed to handle the dynamic creation, management, and control of Minecraft server instances. It uses Docker on Hold-Servers to manage Backend-Servers.
+Nebula is a server management tool built with Java and integrated with Velocity, designed to handle the dynamic creation, management, and control of Minecraft server instances. It uses Docker on Hold-Servers to manage Backend-Servers.
 
-## Key Features:
+## Key Features
+
 - **Simple Permissions**: Simply define groups in the config.
 - **Port Management**: Automatically retrieve free ports to assign to new server instances.
 - **Node Management**: Automatically creates and deletes containers when needed.
 - **Velocity Integration**: Integrates with Velocity, allowing dynamic server registration and player management within the Velocity proxy.
 
-## Requirements:
+## Requirements
+
 - **Java 21**: Required for running the Proxy instance.
 - **Velocity Proxy**: No predefined servers are required; servers are dynamically registered.
 - **Docker and Ruby on hold server**: Necessary for running the backend servers.
 - **User on hold server**: Necessary for interacting with Docker, make sure he has the right permissions.
 
-## Setup:
+## Setup
+
 1. Clone the repository.
 2. Build.
 3. Put into your plugins folder (Velocity-Proxy).
 4. Run Server.
 5. Stop and configure and then start again.
    
-## Important Info:
+## Important Info
+
 On start, nebula will try to create a server on the first node via the lobby template in the config.
 Later on, it will create more lobby servers according to the player count limits defined in the config.
 
+## Multi-Proxy-System
+
+The Multi-Proxy-System is made for server networks with international players, so everybody has a good ping.
+You can configure other proxies in the config, there you can also define the HMAC secret and the port.
+Also define the level and don't give two proxies the same level else they will shut down!
+After you set up everything correctly groups will now sync.
+When a proxy comes only it will get the state and the current groups of the highest level proxy defined in the config.
+But after the first sync it will only get the changes.
+For example if an admin changes the group of a player that is on another proxy their nametag will update
+if you are using NebulaAPI on the backend. And even if you are not using it, the other proxy will still get the changes.
+
 ## In-Game Commands
+
 Nebula also supports in-game commands for admins to manage server instances directly within Minecraft.
 You don't have to use them, Nebula does handle the queue and lobby scaling on its own.
 But here they are:
@@ -63,7 +79,23 @@ But here they are:
     ```
     /node start test
     ```
-    
+
+### **Proxy commands:** **Permission: 'velocity.admin'**
+
+- **/proxy nodes [proxy_name]**
+  - **Description**: Lists nodes on that proxy.
+  - **Example**:
+    ```
+    /proxy nodes proxy-us
+    ```
+
+- **/node servers [proxy_name]**
+  - **Description**: Lists minecraft server instances on that proxy.
+  - **Example**:
+    ```
+    /proxy server proxy-de
+    ```
+
 ### **Group Commands:** **Permission: 'velocity.admin'**
 
 - **/group assign [player_name] [group_name]**  
