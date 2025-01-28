@@ -6,6 +6,8 @@ Voasis Network is a minecraft server network using a self-made next-generation s
 
 Nebula is a server management tool built with Java and integrated with Velocity, designed to handle the dynamic creation, management, and control of Minecraft server instances. It uses Docker on Hold-Servers to manage Backend-Servers.
 
+[Github Page](https://github.com/aquestry/Nebula)
+
 ## Key Features
 
 - **Simple Permissions**: Simply define groups in the config.

@@ -9,8 +9,5 @@ hero:
       text: Discord
       link: https://discord.gg/jC9azQtJmC
     - theme: alt
-      text: GitHub
-      link: https://github.com/aquestry/Nebula
-    - theme: alt
       text: Creator
       link: https://aquestry.dev
