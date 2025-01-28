@@ -2,7 +2,7 @@
 layout: home
 hero:
   name: "Voasis - Nebula"
-  text: Dynamically managed server network.
+  text: Dynamically managed.
   tagline: Simple, powerful, and smart server network that uses Nebula.
   actions:
     - theme: brand
