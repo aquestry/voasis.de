@@ -2,7 +2,7 @@
 
 Nebula is a server management tool built with Java and integrated with Velocity, designed to handle the dynamic creation, management, and control of Minecraft server instances. It uses SSH to connect to the nodes and from there it will use Docker to manage the containers running the Minecraft server instances.
 
-[Github Page](https://github.com/aquestry/Nebula)
+[GitHub Page](https://github.com/aquestry/Nebula)
 
 ## Features
 
@@ -78,8 +78,10 @@ If a player joins he will get the default group you defined in the config.
 
 ## Parties
 
-A player can invite another player to a party then if the leader of the party join a queue and the queue size matches the party size both players will be added to the queue.
+Anybody can create a party by inviting another player, if he is not currently in one.
+If the leader of the party trys to join a queue and the queue size matches the party size all party members will be added to the queue.
 And only the leader can join a queue and invite new members, also if a player quits a party he will be removed from the current queue.
+If the leader quits the party and there is more than one player left and new leader will be chosen.
 
 ## Commands
 
@@ -235,4 +237,4 @@ All the commands have very advanced tab completion for easy usage.
       /party leave
       ```
 
-Feel free to join my discord, if you have more questions or need help. :)
+Feel free to join my discord, and if you have more questions or need help just dm me. :)
