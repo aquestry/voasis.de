@@ -20,6 +20,8 @@ Nebula is a server management tool built with Java and integrated with Velocity,
 
 ## Requirements
 
+Knowledge about Docker, if not, watch a YouTube tutorial.
+
 ### Proxy
 - **Velocity**: Your velocity proxy, no predefined servers.
 - **Java 21**: Required for running the proxy instance.
@@ -58,6 +60,12 @@ But after the first sync it will only get the changes.
 For example if an admin changes the group of a player that is on another proxy their nametag will update
 if you are using NebulaAPI on the backend. And even if you are not using it, the other proxy will still get the changes.
 
+## Group-System
+
+In the perms.conf you can configure groups, each group has a name, a level, a prefix, a list of member uuids and a permission list.
+It supports getting permissons from another group with 'group.<group_name>'.
+If a player joins he will get the default group you defined in the config.
+
 ## Parties
 
 A player can invite another player to a party then if the leader of the party join a queue and the queue size matches the party size both players will be added to the queue.
@@ -72,7 +80,7 @@ And only the leader can join a queue and invite new members, also if a player qu
 - **Party Command ()**: Enables players to create and manage parties.
 - **Lobby Command ()**: Gives players the ability to go to a lobby at any time.
 
-All the commands have advanced tab completion for easy usage.
+All the commands have very advanced tab completion for easy usage.
 
 ### **Container Commands:**
 
@@ -216,3 +224,5 @@ All the commands have advanced tab completion for easy usage.
       ```
       /party leave
       ```
+
+Feel free to dm me for more questions. I will try to answer most of them. :)
