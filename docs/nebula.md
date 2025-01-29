@@ -235,4 +235,4 @@ All the commands have very advanced tab completion for easy usage.
       /party leave
       ```
 
-Feel free to dm me for more questions. I will try to answer most of them. :)
+Feel free to join my discord, if you have more questions or need help. :)
