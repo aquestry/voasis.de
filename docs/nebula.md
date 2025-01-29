@@ -80,7 +80,7 @@ If a player joins he will get the default group you defined in the config.
 
 Anybody can create a party by inviting another player, if he is not currently in one.
 If the leader of the party trys to join a queue and the queue size matches the party size all party members will be added to the queue.
-And only the leader can join a queue and invite new members, also if a player quits a party he will be removed from the current queue.
+Also, only the leader can join a queue and invite new members, and if a player quits a party all members will be removed from the current queue.
 If the leader quits the party and there is more than one player left and new leader will be chosen.
 
 ## Commands
