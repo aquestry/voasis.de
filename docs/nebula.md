@@ -1,6 +1,6 @@
 # About Nebula
 
-Nebula is a server management tool built with Java and integrated with Velocity, designed to handle the dynamic creation, management, and control of Minecraft server instances. It uses Docker on Hold-Servers to manage Backend-Servers.
+Nebula is a server management tool built with Java and integrated with Velocity, designed to handle the dynamic creation, management, and control of Minecraft server instances. It uses SSH to connect to the nodes and from there it will use Docker to manage the containers running the Minecraft server instances.
 
 [Github Page](https://github.com/aquestry/Nebula)
 
@@ -12,11 +12,11 @@ Nebula is a server management tool built with Java and integrated with Velocity,
     the first lobby will continue filling up to 5 players before the newly created lobby starts accepting players.
 - **Party System**: Allows players on a proxy to join each other via a party system.  
     When they queue, they will be placed in the same game.
-    The system ensures that the party size matches the game mode's required player count.
+    The system ensures that the party size matches the game-mode's required player count.
 - **Simple Groups**: Easily define groups in the configuration.
-- **Node Management**: Automatically creates and deletes containers as needed, always using the least utilized node.
-- **Queue Processor**: Nebula has an intelligent queue processor that manages game mode queues and preloads game mode servers efficiently.
-- **Multi-Proxy System**: A ring-based multi-proxy system that currently only synchronizes groups.
+- **Node Management**: Automatically creates and deletes containers as needed, always using the least used node.
+- **Queue Processor**: Nebula has an intelligent queue processor that manages game mode queues and preloads game mode containers efficiently.
+- **Multi-Proxy System**: A ring-based multi-proxy system that currently only synchronizes groups between proxies.
 
 ## Requirements
 
@@ -34,20 +34,30 @@ Knowledge about Docker, if not, watch a YouTube tutorial.
 
 1. Clone the repository.
 2. Build.
-3. Put into your plugin folder.
+3. Put it in your plugin folder.
 
 ## Configuring
 
 To configure your nebula proxy you need at least one node that is accessible via SSH.
 That can be the same server where the proxy itself is run.
 Just put the SSH login details in the config.
+If you are only using a password type 'none' in the private key field. 
+And if you are using a private key type 'none' in the password field.
 After that you can go over the other settings and change them if you want.
 You can also configure the messages in the messages.yml, a way to automatically get the messages.yml from GitHub will be added soon.
 
 ## My own gamemode?
 
-To use your own gamemode in nebula, every node server has to have the docker image installed locally or the nodes will download them from dockerhub,
+Every node server has to have the docker image installed locally or the nodes will try to download them from Dockerhub,
 and if you have 'pull-start' set to true nebula will update all mentioned images from Dockerhub.
+Make sure you have a way to set the Velocity secret, we recommend doing it via env vars that you can set it the config globally or just for specific gamemodes.
+
+#### Dockerhub (Recommended)
+If you want to use Dockerhub for your own images look at my example repos on GitHub, and
+make a GitHub action to build them to Dockerhub. Enable 'pull-start' if you want Nebula to check for updates on start.
+
+#### Local
+If you want to use local images turn of 'pull-start', and put your image on every node.
 
 ## Multi-Proxy-System
 
@@ -74,7 +84,7 @@ And only the leader can join a queue and invite new members, also if a player qu
 ## Commands
 
 - **Group Command (velocity.admin)**: Allows admins to create and delete groups, assign groups, and get group information.
-- **Proxy Command (velocity.admin)**: More like a debug command to get the current nodes and servers from a defined proxy.
+- **Proxy Command (velocity.admin)**: More like a debug command to get the current nodes and containers from a defined proxy.
 - **Container Command (velocity.admin)**: Allows admins to start and stop, create and delete containers.
 - **Queue Command ()**: Allows players to join or leave game queues.
 - **Party Command ()**: Enables players to create and manage parties.
