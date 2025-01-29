@@ -1,4 +1,17 @@
-## Requirements
+# About Nebula
+
+Nebula is a server management tool built with Java and integrated with Velocity, designed to handle the dynamic creation, management, and control of Minecraft server instances. It uses Docker on Hold-Servers to manage Backend-Servers.
+
+[Github Page](https://github.com/aquestry/Nebula)
+
+## Key Features
+
+- **Simple Groups**: Simply define groups in the config.
+- **Node Management**: Automatically creates and deletes containers when needed on the nodes.
+- **Velocity Integration**: Integrates with Velocity, allowing dynamic server registration and player management within the Velocity proxy.
+- **Multi-Proxy-System**: Ring based multi proxy system that currently only syncs the groups.
+
+- ## Requirements
 
 - **Java 21**: Required for running the Proxy instance.
 - **Velocity Proxy**: No predefined servers are required; servers are dynamically registered.
