@@ -4,12 +4,17 @@ Nebula is a server management tool built with Java and integrated with Velocity,
 
 [Github Page](https://github.com/aquestry/Nebula)
 
-## Key Features
+## Features
 
-- **Simple Groups**: Simply define groups in the config.
-- **Node Management**: Automatically creates and deletes containers when needed on the nodes.
-- **Velocity Integration**: Integrates with Velocity, allowing dynamic server registration and player management within the Velocity proxy.
-- **Multi-Proxy-System**: Ring based multi proxy system that currently only syncs the groups.
+- **Scalable Lobbies**: Nebula has a scalable lobby system where you can define minimum and maximum players per lobby.  
+    For example, if you set the minimum to 3 and the maximum to 5, one lobby will be created at the start.  
+    When the player count reaches 3 in that lobby, a new one will be created. However, the first lobby will continue filling up to 5 players before the newly created lobby starts accepting players.
+- **Simple Groups**: Easily define groups in the configuration.
+- **Node Management**: Automatically creates and deletes containers as needed, always using the least utilized node.
+- **Party System**: Allows players on a proxy to join each other via a party system.  
+    When they queue, they will be placed in the same game. The system ensures that the party size matches the game mode's required player count.
+- **Queue Processor**: Nebula has an intelligent queue processor that manages game mode queues and preloads game mode servers efficiently.
+- **Multi-Proxy System**: A ring-based multi-proxy system that currently only synchronizes groups.
 
 - ## Requirements
 
