@@ -58,6 +58,11 @@ But after the first sync it will only get the changes.
 For example if an admin changes the group of a player that is on another proxy their nametag will update
 if you are using NebulaAPI on the backend. And even if you are not using it, the other proxy will still get the changes.
 
+## Parties
+
+A player can invite another player to a party then if the leader of the party join a queue and the queue size matches the party size both players will be added to the queue.
+And only the leader can join a queue and invite new members, also if a player quits a party he will be removed from teh current queue.
+
 ## Commands
 
 - **Group Command (velocity.admin)**: Allows admins to create and delete groups, assign groups, and get group information.
