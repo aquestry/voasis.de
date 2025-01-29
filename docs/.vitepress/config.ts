@@ -3,7 +3,7 @@ export default defineConfig({
   lang: 'en-US',
   title: 'Voasis - Nebula',
   themeConfig: {
-    nav: [{ text: 'About', link: '/about' }],
+    nav: [{ text: 'About', link: '/about' }, { text: 'Setup', link: '/setup' }],
     footer: {
       message: 'Released under the MIT License.',
       copyright: 'Copyright © ' + new Date().getFullYear() + ' Anton K.'
