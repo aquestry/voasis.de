@@ -2,7 +2,7 @@
 
 Nebula is a server management tool built with Java and integrated with Velocity, designed to handle the dynamic creation, management, and control of Minecraft server instances. It uses SSH to connect to the nodes and from there it will use Docker to manage the containers running the Minecraft server instances.
 
-[GitHub Page](https://github.com/aquestry/Nebula)
+[GitHub](https://github.com/aquestry/Nebula)
 
 ## Features
 
